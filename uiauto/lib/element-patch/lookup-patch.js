@@ -171,7 +171,7 @@
         // make sure child isn't nil and isn't a webview
         // (we don't care about them for native and they tend to have tons
         // of children which make performance bad)
-        if (!child.isNil() && child.type() !== "UIAWebView") {
+        if (!child.isNil()) {
           results = results.concat(child
                       ._elementOrElementsWithPredicateWeighted(predicate,
                         weighting, onlyFirst, onlyVisible));
